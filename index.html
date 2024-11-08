@@ -27,6 +27,14 @@
         <img id="preview-banner" class="preview-banner" src="https://via.placeholder.com/500x200?text=Banner+de+Exemplo" alt="Banner do Portfólio">
     </div>
 
+    <!-- Rodapé -->
+    <footer id="footer">
+        <div class="footer-content">
+            <img src="https://i.pinimg.com/originals/92/82/fc/9282fc0dbe01e651cdba3591c63b91be.gif" alt="Ícone" class="footer-img">
+            <p class="footer-text">Feito por Bilu</p>
+        </div>
+    </footer>
+
     <script>
         document.getElementById('atualizar').addEventListener('click', () => {
             const nome = document.getElementById('nome').value;
@@ -37,6 +45,20 @@
             document.getElementById('preview-descricao').innerText = descricao || 'Sua descrição aparecerá aqui.';
             document.getElementById('preview-banner').src = bannerUrl || 'https://via.placeholder.com/500x200?text=Banner+de+Exemplo';
         });
+
+        // Exibir rodapé quando o usuário rolar para o final da página
+        window.onscroll = function() {
+            const footer = document.getElementById('footer');
+            const docHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition + windowHeight >= docHeight - 100) { // 100px antes de atingir o fim
+                footer.style.opacity = 1;
+            } else {
+                footer.style.opacity = 0;
+            }
+        };
     </script>
 </body>
 </html>

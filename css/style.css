@@ -64,9 +64,36 @@ button {
     background-color: black;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Efeito de transição suave */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #6a0dad; /* Cor de fundo roxa quando passar o mouse */
+    background-color: #6a0dad;
+}
+
+footer {
+    text-align: left;
+    background-image: url(https://i.pinimg.com/originals/5d/58/42/5d5842689862a0b26d30e4b680e88025.gif);
+    border-radius: 10px;
+    background-color: black;
+    background-position: fixed;
+    padding: 20px;
+}
+
+p {
+    color: #6a0dad;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    justify-content: left; /* Alinha horizontalmente no centro */
+}
+
+.footer-img {
+    width: 70px; /* Ajuste o tamanho da imagem */
+    height: 70px;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
 }
