@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Criado</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link para o CSS externo -->
+</head>
+<body>
+    <h1 class="titulo">Seu Portfólio Criado!</h1>
+
+    <div class="preview-container">
+        <h2 id="preview-nome" class="preview-titulo">Nome do Usuário</h2>
+        <p id="preview-descricao" class="preview-descricao">Descrição do usuário.</p>
+        <img id="preview-banner" class="preview-banner" src="https://via.placeholder.com/500x200?text=Banner+de+Exemplo" alt="Banner do Portfólio">
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <img src="https://via.placeholder.com/50" alt="Ícone" class="footer-img">
+            <p class="footer-text">Feito por Bilu</p>
+        </div>
+    </footer>
+
+    <script>
+        // Obtém as informações do URL (se passadas)
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get('nome');
+        const descricao = urlParams.get('descricao');
+        const bannerUrl = urlParams.get('banner');
+
+        // Exibe as informações na página
+        if (nome) {
+            document.getElementById('preview-nome').innerText = nome;
+        }
+        if (descricao) {
+            document.getElementById('preview-descricao').innerText = descricao;
+        }
+        if (bannerUrl) {
+            document.getElementById('preview-banner').src = bannerUrl;
+        }
+    </script>
+</body>
+</html>
